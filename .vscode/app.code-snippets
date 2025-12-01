@@ -1,0 +1,68 @@
+{
+	"React Functional Component": {
+		"prefix": "rfc",
+		"body": [
+			"import React from 'react';",
+			"",
+			"const ${1:${TM_FILENAME_BASE}} = () => {",
+			"  return (",
+			"    <div>",
+			"      ${1:${TM_FILENAME_BASE}}",
+			"    </div>",
+			"  );",
+			"};",
+			"",
+			"export default ${1:${TM_FILENAME_BASE}};"
+		],
+		"description": "Cria um componente funcional React"
+	},
+	"React useState": {
+		"prefix": "us",
+		"body": [
+			"const [${1:state}, set${2:State}] = React.useState(${3:null});"
+		],
+		"description": "useState hook"
+	},
+	"React useEffect": {
+		"prefix": "ue",
+		"body": [
+			"React.useEffect(() => {",
+			"  ${1:// efeito aqui}",
+			"  return () => {",
+			"    ${2:// cleanup opcional}",
+			"  };",
+			"}, [${3:dependencias}]);"
+		],
+		"description": "useEffect hook"
+	},
+	"React Functional Component with Props": {
+		"prefix": "rfcp",
+		"body": [
+			"import React from 'react';",
+			"",
+			"const ${1:ComponentName} = ({ ${2:props} }) => {",
+			"  return (",
+			"    <div>",
+			"      {${2:props}}",
+			"    </div>",
+			"  );",
+			"};",
+			"",
+			"export default ${1:ComponentName};"
+		],
+		"description": "Componente funcional React com props"
+	},
+	"consoleLog": {
+		"prefix": "clg",
+		"body": [
+			"// eslint-disable-next-line no-console",
+			"console.log('$1');",
+		],
+		"description": "Displays a message in the console"
+	},
+	"consoleError": {
+		"prefix": "cer",
+		"body": "console.error(${1:error});",
+		"description": "Displays a message in the console and also includes a stack trace from where the method was called"
+	},
+}

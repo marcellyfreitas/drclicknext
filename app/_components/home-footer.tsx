@@ -1,6 +1,6 @@
 import React from 'react';
 import { Button } from '@/components/ui/button';
-import { IconBrandFacebook, IconBrandGooglePlay, IconBrandInstagram, IconBrandLinkedin, IconBrandYoutube } from '@tabler/icons-react';
+import { IconBrandAndroid, IconBrandFacebook, IconBrandGooglePlay, IconBrandInstagram, IconBrandLinkedin, IconBrandYoutube } from '@tabler/icons-react';
 import Link from 'next/link';
 
 const HomeFooter = () => {
@@ -34,10 +34,17 @@ const HomeFooter = () => {
 						Já é cliente? Baixe o aplicativo para usar seus benefícios.
 					</h4>
 					<div className="grid grid-cols-1 gap-2">
-						<Button className="cursor-pointer" variant={'secondary'}>
-							<IconBrandGooglePlay />
-							Baixe o aplicativo
-						</Button>
+						<div className="flex space-x-4">
+							<Link
+								href={'/files/drclick.apk'}
+								target="_blank" download
+								className="cursor-pointer py-2 px-4 bg-primary rounded-lg flex gap-2 items-center text-white"
+							>
+								<IconBrandAndroid />
+								Baixar aplicativo
+							</Link>
+
+						</div>
 					</div>
 				</div>
 

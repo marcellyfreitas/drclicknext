@@ -2,6 +2,7 @@ import { CheckCircle } from 'lucide-react';
 import React from 'react';
 import { Button } from '../../components/ui/button';
 import { IconBrandAndroid } from '@tabler/icons-react';
+import Link from 'next/link';
 
 const HomeMobileapp = () => {
 	return (
@@ -22,11 +23,15 @@ const HomeMobileapp = () => {
 						</ul>
 
 						<div className="flex space-x-4">
-							<Button className="cursor-pointer">
+							<Link
+								href={'/files/drclick.apk'}
+								target="_blank" download
+								className="cursor-pointer py-2 px-4 bg-primary rounded-lg flex gap-2 items-center text-white"
+							>
 								<IconBrandAndroid />
-
 								Baixar aplicativo
-							</Button>
+							</Link>
+
 						</div>
 					</div>
 					<div className="flex justify-center items-center">
